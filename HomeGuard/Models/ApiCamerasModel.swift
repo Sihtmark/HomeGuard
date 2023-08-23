@@ -28,15 +28,11 @@ struct RoomsAndCameras: Codable, RoomsAndCamerasProtocol {
 }
 
 protocol CameraProtocol {
-    var name: String { get }
     var snapshot: String { get }
-    var room: String? { get }
-    var id: Int { get }
-    var favorites: Bool { get }
     var rec: Bool { get }
 }
 
-struct Camera: Codable, CameraProtocol {
+struct Camera: Codable, CameraProtocol, ObjectModelProtocol {
     let name: String
     let snapshot: String
     let room: String?

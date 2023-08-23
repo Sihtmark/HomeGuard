@@ -18,14 +18,10 @@ struct APIDoorsModel: Codable, APIDoorsModelProtocol {
 }
 
 protocol DoorProtocol {
-    var name: String { get }
-    var room: String? { get }
-    var id: Int { get }
-    var favorites: Bool { get }
     var snapshot: String? { get }
 }
 
-struct Door: Codable {
+struct Door: Codable, DoorProtocol, ObjectModelProtocol {
     let name: String
     let room: String?
     let id: Int

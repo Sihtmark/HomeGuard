@@ -9,11 +9,12 @@ import UIKit
 
 protocol DoorModelProtocol {
     var lock: Bool { get }
+    var snapshot: UIImage? { get }
 
     init(managedObject: RealmDoor)
 }
 
-struct DoorModel: DoorModelProtocol, AbstractModelProtocol {
+struct DoorModel: DoorModelProtocol, ObjectModelProtocol {
     var name: String
     let room: String?
     let id: Int

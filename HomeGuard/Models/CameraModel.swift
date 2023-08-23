@@ -9,11 +9,12 @@ import UIKit
 
 protocol CameraModelProtocol {
     var rec: Bool { get }
+    var snapshot: UIImage? { get }
 
     init(managedObject: RealmCamera)
 }
 
-struct CameraModel: CameraModelProtocol, AbstractModelProtocol {
+struct CameraModel: CameraModelProtocol, ObjectModelProtocol {
     let name: String
     let snapshot: UIImage?
     let room: String?

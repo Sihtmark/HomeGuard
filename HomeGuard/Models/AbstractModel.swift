@@ -7,10 +7,9 @@
 
 import UIKit
 
-protocol AbstractModelProtocol {
+protocol ObjectModelProtocol {
     var name: String { get }
     var room: String? { get }
     var id: Int { get }
     var favorites: Bool { get }
-    var snapshot: UIImage? { get }
 }
