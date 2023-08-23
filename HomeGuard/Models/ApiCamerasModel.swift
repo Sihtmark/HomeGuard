@@ -5,19 +5,34 @@
 //  Created by sihtmark on 07.08.2023.
 //
 
-import Foundation
+import UIKit
 
-struct ApiCamerasModel: Codable {
+protocol ApiCamerasModelProtocol {
+    var success: Bool { get }
+    var data: RoomsAndCameras { get }
+}
+
+struct ApiCamerasModel: Codable, ApiCamerasModelProtocol {
     let success: Bool
     let data: RoomsAndCameras
 }
 
-struct RoomsAndCameras: Codable {
+protocol RoomsAndCamerasProtocol {
+    var room: [String] { get }
+    var cameras: [Camera] { get }
+}
+
+struct RoomsAndCameras: Codable, RoomsAndCamerasProtocol {
     let room: [String]
     let cameras: [Camera]
 }
 
-struct Camera: Codable {
+protocol CameraProtocol {
+    var snapshot: String { get }
+    var rec: Bool { get }
+}
+
+struct Camera: Codable, CameraProtocol, ObjectModelProtocol {
     let name: String
     let snapshot: String
     let room: String?

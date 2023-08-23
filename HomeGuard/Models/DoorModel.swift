@@ -7,7 +7,14 @@
 
 import UIKit
 
-struct DoorModel {
+protocol DoorModelProtocol {
+    var lock: Bool { get }
+    var snapshot: UIImage? { get }
+
+    init(managedObject: RealmDoor)
+}
+
+struct DoorModel: DoorModelProtocol, ObjectModelProtocol {
     var name: String
     let room: String?
     let id: Int
@@ -17,7 +24,6 @@ struct DoorModel {
 }
 
 extension DoorModel {
-
     init(managedObject: RealmDoor) {
         name = managedObject.name
         room = managedObject.room
