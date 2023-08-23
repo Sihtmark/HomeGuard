@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523E435B2A9651EB006A2F56 /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523E435A2A9651EB006A2F56 /* AbstractModel.swift */; };
 		528E0BB62A80EBA50009C153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E0BB52A80EBA50009C153 /* AppDelegate.swift */; };
 		528E0BB82A80EBA50009C153 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E0BB72A80EBA50009C153 /* SceneDelegate.swift */; };
 		528E0BBA2A80EBA50009C153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E0BB92A80EBA50009C153 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		523E435A2A9651EB006A2F56 /* AbstractModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
 		528E0BB22A80EBA50009C153 /* HomeGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528E0BB52A80EBA50009C153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		528E0BB72A80EBA50009C153 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		528E0BD82A80EF160009C153 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				523E435A2A9651EB006A2F56 /* AbstractModel.swift */,
 				528E0BD92A80EF260009C153 /* ApiCamerasModel.swift */,
 				528E0BDB2A80EF360009C153 /* CameraModel.swift */,
 				528E0BDD2A80EF4A0009C153 /* ApiDoorsModel.swift */,
@@ -252,6 +255,7 @@
 				528E0BBA2A80EBA50009C153 /* ViewController.swift in Sources */,
 				528E0BE52A80EFB20009C153 /* DoorsTableViewCell.swift in Sources */,
 				528E0BB62A80EBA50009C153 /* AppDelegate.swift in Sources */,
+				523E435B2A9651EB006A2F56 /* AbstractModel.swift in Sources */,
 				528E0BF32A80F07B0009C153 /* Extensions.swift in Sources */,
 				528E0BD72A80EEFF0009C153 /* DataManager.swift in Sources */,
 				528E0BE72A80EFC20009C153 /* IntercomTableViewCell.swift in Sources */,

@@ -5,11 +5,24 @@
 //  Created by sihtmark on 07.08.2023.
 //
 
-import Foundation
+import UIKit
 
-struct APIDoorsModel: Codable {
+protocol APIDoorsModelProtocol {
+    var success: Bool { get }
+    var data: [Door] { get }
+}
+
+struct APIDoorsModel: Codable, APIDoorsModelProtocol {
     let success: Bool
     let data: [Door]
+}
+
+protocol DoorProtocol {
+    var name: String { get }
+    var room: String? { get }
+    var id: Int { get }
+    var favorites: Bool { get }
+    var snapshot: String? { get }
 }
 
 struct Door: Codable {
